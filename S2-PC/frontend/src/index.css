@@ -7,3 +7,28 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.my-nav-container {
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.my-nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.my-nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-icon-container {
+  padding: 10px;
+}
+
+.nav-icon-container:hover {
+  cursor: pointer;
+}

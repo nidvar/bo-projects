@@ -2,21 +2,20 @@ import { Route, Routes } from "react-router";
 import { CreatePage } from "./pages/CreatePage";
 import { Homepage } from "./pages/HomePage";
 import { NoteDetailPage } from "./pages/NoteDetailPage";
+import Navbar from "./components/Navbar";
 
 function App() {
   const themes = [
-    "Light",
     "Retro",
     "Cyberpunk",
-    "Valentine",
     "Garden",
     "Aqua",
-    "Wireframe",
     "Autumn",
   ];
 
   return (
-    <div data-theme={themes[7].toLowerCase()}>
+    <div data-theme={themes[1].toLowerCase()}>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/create" element={<CreatePage />} />
