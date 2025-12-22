@@ -32,3 +32,19 @@
 .nav-icon-container:hover {
   cursor: pointer;
 }
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-card {
+  max-width: 300px;
+  max-height: 300px;
+  margin: 10px;
+
+  border: 1px solid #e2e8f0;
+  padding: 5px;
+}

@@ -11,10 +11,11 @@ function App() {
     "Garden",
     "Aqua",
     "Autumn",
+    "wireframe",
   ];
 
   return (
-    <div data-theme={themes[1].toLowerCase()}>
+    <div data-theme={themes[5].toLowerCase()}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
