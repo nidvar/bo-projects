@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+
+import ProductCard from "../components/ProductCard";
+
 import type { ProductType } from "../types";
 
 export const Homepage = () => {
@@ -9,6 +12,7 @@ export const Homepage = () => {
     try {
       const response = await fetch('http://localhost:3000/api/all');
       const data = await response.json();
+      console.log(data);
       setData(data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -23,13 +27,9 @@ export const Homepage = () => {
     <div className="main">
       <div className="products-container">
         {
-          data ? data.map((item, index) => {
-            return <div key={index} className="product-card">
-              <img src={item.image} />
-              <p>{item.name}</p>
-              <p>{item.price}</p>
-            </div>
-          }) : <p>Loading...</p>
+          data.length > 0 ? data.map((item, index) => {
+              return (<ProductCard key={index} product={item}/>)
+          }): <p>Loading...</p> 
         }
       </div>
     </div>

@@ -15,7 +15,7 @@ function App() {
   ];
 
   return (
-    <div data-theme={themes[5].toLowerCase()}>
+    <div data-theme={themes[5].toLowerCase()} className="app">
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
